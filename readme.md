@@ -73,7 +73,7 @@ node server.js
 
 ---
 
-## 📚 O Que Estudar para Este Projeto
+## 📚 O Que Estudei para Este Projeto
 
 ### Front-End:
 - HTML, CSS, JS básico
@@ -101,5 +101,3 @@ node server.js
 
 ## 🧑‍💻 Desenvolvido por
 **Lucas Mendonça Martins**
-
-> Esse projeto é ideal para estudo de integração entre linguagens e construção de uma aplicação full stack real. Deseja que eu gere os arquivos iniciais do projeto também?
