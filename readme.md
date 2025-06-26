@@ -1,36 +1,67 @@
-# 🔐 Node Auth Backend
+# 🎥 YouTube Video Converter - Projeto Full Stack
 
-Este projeto é uma API simples de autenticação desenvolvida em **Node.js com Express**, utilizando **arquivos JSON como base de dados mock**.
-
-Ideal para fins de aprendizado e prototipagem rápida.
+Este projeto é uma aplicação web para **converter vídeos do YouTube** em diferentes formatos, como MP4 ou MP3. Desenvolvido com **HTML/CSS no front-end**, e **Node.js + Python no back-end** para fazer a integração com o YouTube e conversão dos arquivos.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🗂️ Estrutura do Projeto (sugestão)
 
 ```
-meu-backend/
-├── server.js                # Ponto de entrada da aplicação
-├── routes/
-│   └── auth.js              # Rotas de login e registro
-├── controllers/
-│   └── authController.js    # Lógica de autenticação
-├── users.json               # Arquivo mock que armazena os usuários
+youtube-converter/
+├── backend/
+│   ├── server.js             # Servidor Node.js
+│   ├── routes/
+│   │   └── convert.js        # Rota de conversão
+│   ├── controllers/
+│   │   └── convertController.js
+│   └── youtube_download.py   # Script Python para baixar vídeos
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 ```
 
 ---
 
-## 🚀 Como executar o projeto
+## 🔧 Tecnologias Utilizadas
 
-1. **Clone o repositório**
+### Front-End:
+- HTML5
+- CSS3
+- JavaScript (Fetch API para comunicação com back-end)
+
+### Back-End:
+- Node.js + Express
+- Python 3
+- Biblioteca Python: `pytube`, `moviepy`, `ffmpeg`
+
+---
+
+## 🚀 Funcionalidades
+- ✅ Inserção de URL do YouTube pelo usuário
+- ✅ Comunicação front-end/back-end com Node.js
+- ✅ Execução de script Python para baixar vídeo
+- ✅ Opção de conversão para MP4 ou MP3
+- ✅ Retorno de link para download do arquivo convertido
+
+---
+
+## 📌 Como Rodar o Projeto Localmente
+
+### Requisitos:
+- Node.js instalado
+- Python 3 instalado
+
+### Passos:
+1. **Instale as dependências Node.js**
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-cd meu-backend
+npm install express cors
 ```
 
-2. **Instale as dependências**
+2. **Instale as bibliotecas Python**
 ```bash
-npm install express
+pip install pytube moviepy
 ```
 
 3. **Inicie o servidor**
@@ -38,58 +69,37 @@ npm install express
 node server.js
 ```
 
-4. Acesse:
-```
-http://localhost:3000/
-```
+4. **Abra o `index.html` no navegador**
 
 ---
 
-## 📌 Rotas da API
+## 📚 O Que Estudar para Este Projeto
 
-### `POST /auth/register`
+### Front-End:
+- HTML, CSS, JS básico
+- Formulários e manipulação DOM
+- Fetch API (requisições HTTP)
 
-Registra um novo usuário.
+### Back-End:
+- Node.js com Express
+- Rotas e controle de requisições POST
+- Integração com Python usando `child_process`
 
-**Body JSON:**
-```json
-{
-  "email": "usuario@email.com",
-  "senha": "123456"
-}
-```
-
-### `POST /auth/login`
-
-Realiza login do usuário.
-
-**Body JSON:**
-```json
-{
-  "email": "usuario@email.com",
-  "senha": "123456"
-}
-```
+### Python:
+- `pytube` para baixar vídeos
+- `moviepy` ou `ffmpeg` para conversão de áudio/vídeo
 
 ---
 
-## ✅ Funcionalidades
-
-- Cadastro de usuários (sem criptografia)
-- Login básico com validação
-- Armazenamento simples em `users.json`
-
----
-
-## 🔧 Melhorias Futuras
-
-- Adicionar **criptografia** de senhas com `bcrypt`
-- Utilizar **JWT** para autenticação
-- Persistência real com **MongoDB** ou **PostgreSQL**
-- Middleware de autenticação para proteger rotas
+## 📄 Exemplo de Uso (interface)
+- Usuário cola o link do YouTube
+- Escolhe o formato (MP3/MP4)
+- Clica em "Converter"
+- Download inicia automaticamente após o processamento
 
 ---
 
-## 👨‍💼 Desenvolvido por
-
+## 🧑‍💻 Desenvolvido por
 **Lucas Mendonça Martins**
+
+> Esse projeto é ideal para estudo de integração entre linguagens e construção de uma aplicação full stack real. Deseja que eu gere os arquivos iniciais do projeto também?
